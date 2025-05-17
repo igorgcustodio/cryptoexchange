@@ -1,0 +1,4 @@
+module Networking {
+    header "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Networking.build/Networking-Swift.h"
+    requires objc
+}

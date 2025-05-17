@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/DesignSystem.build/master.swiftdeps"
+  },
+  "/Users/igorcustodio/development/CryptoExchange/Modules/Sources/DesignSystem/DesignSystem.swift": {
+    "dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/DesignSystem.build/DesignSystem.d",
+    "object": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/DesignSystem.build/DesignSystem.swift.o",
+    "swiftmodule": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/DesignSystem.build/DesignSystem~partial.swiftmodule",
+    "swift-dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/DesignSystem.build/DesignSystem.swiftdeps"
+  }
+}

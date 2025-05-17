@@ -1,0 +1,4 @@
+module CoreUI {
+    header "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/CoreUI.build/CoreUI-Swift.h"
+    requires objc
+}

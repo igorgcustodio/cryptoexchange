@@ -1,0 +1,4 @@
+module DesignSystem {
+    header "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/DesignSystem.build/DesignSystem-Swift.h"
+    requires objc
+}

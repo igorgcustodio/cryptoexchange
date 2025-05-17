@@ -1,0 +1,41 @@
+{
+  "": {
+    "swift-dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/master.swiftdeps"
+  },
+  "/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/Main/MainCoordinator.swift": {
+    "dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainCoordinator.d",
+    "object": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainCoordinator.swift.o",
+    "swiftmodule": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainCoordinator~partial.swiftmodule",
+    "swift-dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainCoordinator.swiftdeps"
+  },
+  "/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/Main/MainSceneFactory.swift": {
+    "dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainSceneFactory.d",
+    "object": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainSceneFactory.swift.o",
+    "swiftmodule": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainSceneFactory~partial.swiftmodule",
+    "swift-dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainSceneFactory.swiftdeps"
+  },
+  "/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/Main/MainView.swift": {
+    "dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainView.d",
+    "object": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainView.swift.o",
+    "swiftmodule": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainView~partial.swiftmodule",
+    "swift-dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainView.swiftdeps"
+  },
+  "/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/Main/MainViewController.swift": {
+    "dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainViewController.d",
+    "object": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainViewController.swift.o",
+    "swiftmodule": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainViewController.swiftdeps"
+  },
+  "/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/Main/MainViewModel.swift": {
+    "dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainViewModel.d",
+    "object": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainViewModel.swift.o",
+    "swiftmodule": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/MainViewModel.swiftdeps"
+  },
+  "/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/SceneFactory.swift": {
+    "dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/SceneFactory.d",
+    "object": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/SceneFactory.swift.o",
+    "swiftmodule": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/SceneFactory~partial.swiftmodule",
+    "swift-dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/SceneFactory.swiftdeps"
+  }
+}

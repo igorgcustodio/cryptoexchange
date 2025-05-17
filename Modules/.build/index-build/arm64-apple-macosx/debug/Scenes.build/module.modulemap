@@ -1,0 +1,4 @@
+module Scenes {
+    header "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/Scenes-Swift.h"
+    requires objc
+}

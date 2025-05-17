@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Networking.build/master.swiftdeps"
+  },
+  "/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Networking/Networking.swift": {
+    "dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Networking.build/Networking.d",
+    "object": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Networking.build/Networking.swift.o",
+    "swiftmodule": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Networking.build/Networking~partial.swiftmodule",
+    "swift-dependencies": "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Networking.build/Networking.swiftdeps"
+  }
+}

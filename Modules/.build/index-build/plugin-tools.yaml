@@ -1,0 +1,157 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "Core-arm64-apple-macosx15.0-debug.module": ["<Core-arm64-apple-macosx15.0-debug.module>"]
+  "CoreUI-arm64-apple-macosx15.0-debug.module": ["<CoreUI-arm64-apple-macosx15.0-debug.module>"]
+  "DesignSystem-arm64-apple-macosx15.0-debug.module": ["<DesignSystem-arm64-apple-macosx15.0-debug.module>"]
+  "Networking-arm64-apple-macosx15.0-debug.module": ["<Networking-arm64-apple-macosx15.0-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "Scenes-arm64-apple-macosx15.0-debug.module": ["<Scenes-arm64-apple-macosx15.0-debug.module>"]
+  "Umbrella-arm64-apple-macosx15.0-debug.module": ["<Umbrella-arm64-apple-macosx15.0-debug.module>"]
+  "main": ["<Core-arm64-apple-macosx15.0-debug.module>","<CoreUI-arm64-apple-macosx15.0-debug.module>","<DesignSystem-arm64-apple-macosx15.0-debug.module>","<Networking-arm64-apple-macosx15.0-debug.module>","<Scenes-arm64-apple-macosx15.0-debug.module>","<Umbrella-arm64-apple-macosx15.0-debug.module>"]
+  "test": ["<Core-arm64-apple-macosx15.0-debug.module>","<CoreUI-arm64-apple-macosx15.0-debug.module>","<DesignSystem-arm64-apple-macosx15.0-debug.module>","<Networking-arm64-apple-macosx15.0-debug.module>","<Scenes-arm64-apple-macosx15.0-debug.module>","<Umbrella-arm64-apple-macosx15.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Core/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/igorcustodio/development/CryptoExchange/Modules/Sources/CoreUI/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/igorcustodio/development/CryptoExchange/Modules/Sources/DesignSystem/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Networking/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Umbrella/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Core.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Core/Coordinator.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Core/EquatableAssociateValue.swift"]
+    outputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Core.build/sources"]
+    description: "Write auxiliary file /Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Core.build/sources"
+
+  "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/CoreUI.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/CoreUI/LoadableViewController.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/CoreUI/ReusableIdentifier.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/CoreUI/TableViewData.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/CoreUI/UIHelper.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/CoreUI/ViewCodeConfiguration.swift"]
+    outputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/CoreUI.build/sources"]
+    description: "Write auxiliary file /Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/CoreUI.build/sources"
+
+  "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/DesignSystem.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/DesignSystem/DesignSystem.swift"]
+    outputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/DesignSystem.build/sources"]
+    description: "Write auxiliary file /Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/DesignSystem.build/sources"
+
+  "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Networking.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Networking/Networking.swift"]
+    outputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Networking.build/sources"]
+    description: "Write auxiliary file /Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Networking.build/sources"
+
+  "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/Main/MainCoordinator.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/Main/MainSceneFactory.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/Main/MainView.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/Main/MainViewController.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/Main/MainViewModel.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/SceneFactory.swift"]
+    outputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/sources"]
+    description: "Write auxiliary file /Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/sources"
+
+  "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Umbrella.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Umbrella/Umbrella.swift"]
+    outputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Umbrella.build/sources"]
+    description: "Write auxiliary file /Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Umbrella.build/sources"
+
+  "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<Core-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/Core.swiftmodule"]
+    outputs: ["<Core-arm64-apple-macosx15.0-debug.module>"]
+
+  "<CoreUI-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/CoreUI.swiftmodule"]
+    outputs: ["<CoreUI-arm64-apple-macosx15.0-debug.module>"]
+
+  "<DesignSystem-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/DesignSystem.swiftmodule"]
+    outputs: ["<DesignSystem-arm64-apple-macosx15.0-debug.module>"]
+
+  "<Networking-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/Networking.swiftmodule"]
+    outputs: ["<Networking-arm64-apple-macosx15.0-debug.module>"]
+
+  "<Scenes-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/Scenes.swiftmodule"]
+    outputs: ["<Scenes-arm64-apple-macosx15.0-debug.module>"]
+
+  "<Umbrella-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/Umbrella.swiftmodule"]
+    outputs: ["<Umbrella-arm64-apple-macosx15.0-debug.module>"]
+
+  "C.Core-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Core/Coordinator.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Core/EquatableAssociateValue.swift","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Core.build/sources"]
+    outputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/Core.swiftmodule"]
+    description: "Compiling Swift Module 'Core' (2 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","Core","-emit-dependencies","-emit-module","-emit-module-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/Core.swiftmodule","-output-file-map","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Core.build/output-file-map.json","-parse-as-library","-incremental","@/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Core.build/sources","-I","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-enable-batch-mode","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Core.build/Core-Swift.h","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","modules"]
+
+  "C.CoreUI-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/Sources/CoreUI/LoadableViewController.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/CoreUI/ReusableIdentifier.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/CoreUI/TableViewData.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/CoreUI/UIHelper.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/CoreUI/ViewCodeConfiguration.swift","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/Core.swiftmodule","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/CoreUI.build/sources"]
+    outputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/CoreUI.swiftmodule"]
+    description: "Compiling Swift Module 'CoreUI' (5 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","CoreUI","-emit-dependencies","-emit-module","-emit-module-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/CoreUI.swiftmodule","-output-file-map","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/CoreUI.build/output-file-map.json","-parse-as-library","-incremental","@/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/CoreUI.build/sources","-I","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-enable-batch-mode","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/CoreUI.build/CoreUI-Swift.h","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","modules"]
+
+  "C.DesignSystem-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/Sources/DesignSystem/DesignSystem.swift","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/DesignSystem.build/sources"]
+    outputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/DesignSystem.swiftmodule"]
+    description: "Compiling Swift Module 'DesignSystem' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","DesignSystem","-emit-dependencies","-emit-module","-emit-module-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/DesignSystem.swiftmodule","-output-file-map","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/DesignSystem.build/output-file-map.json","-parse-as-library","-incremental","@/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/DesignSystem.build/sources","-I","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-enable-batch-mode","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/DesignSystem.build/DesignSystem-Swift.h","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","modules"]
+
+  "C.Networking-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Networking/Networking.swift","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Networking.build/sources"]
+    outputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/Networking.swiftmodule"]
+    description: "Compiling Swift Module 'Networking' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","Networking","-emit-dependencies","-emit-module","-emit-module-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/Networking.swiftmodule","-output-file-map","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Networking.build/output-file-map.json","-parse-as-library","-incremental","@/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Networking.build/sources","-I","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-enable-batch-mode","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Networking.build/Networking-Swift.h","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","modules"]
+
+  "C.Scenes-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/Main/MainCoordinator.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/Main/MainSceneFactory.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/Main/MainView.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/Main/MainViewController.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/Main/MainViewModel.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/SceneFactory.swift","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/Core.swiftmodule","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/CoreUI.swiftmodule","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/sources"]
+    outputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/Scenes.swiftmodule"]
+    description: "Compiling Swift Module 'Scenes' (6 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","Scenes","-emit-dependencies","-emit-module","-emit-module-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/Scenes.swiftmodule","-output-file-map","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/output-file-map.json","-parse-as-library","-incremental","@/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/sources","-I","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-enable-batch-mode","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Scenes.build/Scenes-Swift.h","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","modules"]
+
+  "C.Umbrella-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Umbrella/Umbrella.swift","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/Core.swiftmodule","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/CoreUI.swiftmodule","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/Networking.swiftmodule","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/DesignSystem.swiftmodule","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/Scenes.swiftmodule","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Umbrella.build/sources"]
+    outputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/Umbrella.swiftmodule"]
+    description: "Compiling Swift Module 'Umbrella' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","Umbrella","-emit-dependencies","-emit-module","-emit-module-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules/Umbrella.swiftmodule","-output-file-map","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Umbrella.build/output-file-map.json","-parse-as-library","-incremental","@/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Umbrella.build/sources","-I","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-enable-batch-mode","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Umbrella.build/Umbrella-Swift.h","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","modules"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Core/","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/CoreUI/","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/DesignSystem/","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Networking/","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Scenes/","/Users/igorcustodio/development/CryptoExchange/Modules/Sources/Umbrella/","/Users/igorcustodio/development/CryptoExchange/Modules/Package.swift","/Users/igorcustodio/development/CryptoExchange/Modules/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

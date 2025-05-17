@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		25D6BB8D2DD8597D00D4B3E1 /* Umbrella in Frameworks */ = {isa = PBXBuildFile; productRef = 25D6BB8C2DD8597D00D4B3E1 /* Umbrella */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		2564DCA52DD8266500C72C09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25D6BB8D2DD8597D00D4B3E1 /* Umbrella in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +130,7 @@
 			);
 			name = CryptoExchange;
 			packageProductDependencies = (
+				25D6BB8C2DD8597D00D4B3E1 /* Umbrella */,
 			);
 			productName = CryptoExchange;
 			productReference = 2564DC8E2DD8266200C72C09 /* CryptoExchange.app */;
@@ -208,6 +214,9 @@
 			);
 			mainGroup = 2564DC852DD8266200C72C09;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				25D6BB8B2DD8597D00D4B3E1 /* XCLocalSwiftPackageReference "Modules" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2564DC8F2DD8266200C72C09 /* Products */;
 			projectDirPath = "";
@@ -581,6 +590,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		25D6BB8B2DD8597D00D4B3E1 /* XCLocalSwiftPackageReference "Modules" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		25D6BB8C2DD8597D00D4B3E1 /* Umbrella */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Umbrella;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2564DC862DD8266200C72C09 /* Project object */;
 }
