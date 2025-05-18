@@ -14,6 +14,7 @@ let package = Package(
         .library(name: "Networking", targets: ["Networking"]),
         .library(name: "DesignSystem", targets: ["DesignSystem"]),
         .library(name: "Scenes", targets: ["Scenes"]),
+        .library(name: "Models", targets: ["Models"]),
     ],
     dependencies: [],
     targets: [
@@ -24,7 +25,8 @@ let package = Package(
                 "CoreUI",
                 "Networking",
                 "DesignSystem",
-                "Scenes"
+                "Scenes",
+                "Models",
             ]
         ),
         .target(name: "Core"),
@@ -40,8 +42,13 @@ let package = Package(
             name: "Scenes",
             dependencies: [
                 "Core",
-                "CoreUI"
+                "CoreUI",
+                "Models",
+                "Networking"
             ]
+        ),
+        .target(
+            name: "Models"
         ),
     ],
     swiftLanguageVersions: [.v5]
