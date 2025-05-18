@@ -11,7 +11,8 @@ public final class MainSeceneFactory: MainSceneBuilding {
     public init() { }
 
     public func makeMainScene() -> UIViewController {
-        let viewModel = MainViewModel()
+        let service = MainService()
+        let viewModel = MainViewModel(service: service)
         let viewController = MainViewController(viewModel: viewModel)
         return viewController
     }

@@ -17,6 +17,9 @@ public final class MainViewController: LoadableViewController<MainView> {
     override public func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        Task {
+            try await viewModel.fetchExchanges()
+        }
     }
 
     override public func viewWillAppear(_ animated: Bool) {
