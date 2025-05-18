@@ -37,12 +37,18 @@ let package = Package(
             ]
         ),
         .target(name: "Networking"),
-        .target(name: "DesignSystem"),
+        .target(
+            name: "DesignSystem",
+            dependencies: [
+                "CoreUI",
+            ]
+        ),
         .target(
             name: "Scenes",
             dependencies: [
                 "Core",
                 "CoreUI",
+                "DesignSystem",
                 "Models",
                 "Networking"
             ]
