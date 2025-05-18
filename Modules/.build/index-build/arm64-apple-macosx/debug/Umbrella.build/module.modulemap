@@ -1,4 +1,0 @@
-module Umbrella {
-    header "/Users/igorcustodio/development/CryptoExchange/Modules/.build/index-build/arm64-apple-macosx/debug/Umbrella.build/Umbrella-Swift.h"
-    requires objc
-}
