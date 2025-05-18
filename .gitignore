@@ -1,5 +1,5 @@
 .DS_Store
-Modules/.build
+Modules/.build/
 Modules/Packages
 xcuserdata/
 DerivedData/
