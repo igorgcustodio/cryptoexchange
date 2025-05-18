@@ -3,7 +3,7 @@ import Foundation
 public typealias NetworkingService = Networking.NetworkingService
 
 extension Networking {
-    public class NetworkingService<R: Route> {
+    open class NetworkingService<R: Route> {
         let urlSession: URLSessionProtocol
         let baseUrl: String
 
@@ -12,7 +12,7 @@ extension Networking {
             self.baseUrl = baseUrl
         }
 
-        public func request<T: Resource>(_ route: R) async throws -> T {
+        public func request<T: Decodable>(_ route: R) async throws -> T {
             let data: Data? = try await request(route)
 
             guard let data else {
@@ -20,7 +20,7 @@ extension Networking {
             }
 
             do {
-                return try T.decode(from: data)
+                return try try JSONDecoder().decode(T.self, from: data)
             } catch let error as DecodingError {
                 throw ResponseError.decodingFailed(underlyingError: error)
             } catch {

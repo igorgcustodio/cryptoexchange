@@ -42,10 +42,6 @@ public enum Networking {
         }
     }
 
-    public protocol Resource: Decodable {
-        static func decode(from: Data) throws -> Self
-    }
-
     public struct RequestBuilder {
         let baseUrl: String
         let route: Route
@@ -56,7 +52,7 @@ public enum Networking {
             case invalidQueryItems
         }
 
-        func buildRequest() throws -> URLRequest {
+        func buildRequest(defaultHeaders: [String: String] = DefaultHeaders.headers) throws -> URLRequest {
             guard var url = URL(string: baseUrl + route.path)
             else {
                 throw RequestError.badUrl
@@ -81,6 +77,10 @@ public enum Networking {
 
             request.httpMethod = route.method.rawValue
 
+            for header in defaultHeaders {
+                request.setValue(header.value, forHTTPHeaderField: header.key)
+            }
+
             for header in route.headers {
                 request.setValue(header.value, forHTTPHeaderField: header.key)
             }
@@ -94,6 +94,9 @@ public enum Networking {
                 }
             }
 
+            print(request)
+            print(request.allHTTPHeaderFields)
+
             return request
         }
     }
@@ -102,10 +105,4 @@ public enum Networking {
 extension Networking.Route {
     public var timeout: TimeInterval { 60 }
     public var cachePolicy: URLRequest.CachePolicy { .reloadIgnoringLocalCacheData }
-}
-
-extension Networking.Resource {
-    public static func decode(from data: Data) throws -> Self {
-        try JSONDecoder().decode(Self.self, from: data)
-    }
 }
