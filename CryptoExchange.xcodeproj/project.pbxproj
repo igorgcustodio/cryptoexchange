@@ -31,7 +31,9 @@
 		2564DC8E2DD8266200C72C09 /* CryptoExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2564DCA42DD8266500C72C09 /* CryptoExchangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoExchangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2564DCAE2DD8266500C72C09 /* CryptoExchangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoExchangeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25C678062DDAE27A0004655D /* CryptoExchange.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CryptoExchange.xctestplan; sourceTree = "<group>"; };
 		25D6CBE52DD9882700D4B3E1 /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Modules; sourceTree = "<group>"; };
+		25D6FCFD2DDAE26700D4B3E1 /* CryptoExchange.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CryptoExchange.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -94,6 +96,8 @@
 		2564DC852DD8266200C72C09 = {
 			isa = PBXGroup;
 			children = (
+				25C678062DDAE27A0004655D /* CryptoExchange.xctestplan */,
+				25D6FCFD2DDAE26700D4B3E1 /* CryptoExchange.xctestplan */,
 				25D6CBE52DD9882700D4B3E1 /* Modules */,
 				2564DC902DD8266200C72C09 /* CryptoExchange */,
 				2564DCA72DD8266500C72C09 /* CryptoExchangeTests */,
