@@ -52,12 +52,13 @@ extension Coordinator {
     }
 }
 
-protocol CoordinatorCommonDelegate: AnyObject {
+@MainActor
+public protocol CoordinatorCommonDelegate: AnyObject {
     func backTapped()
     func closeTapped()
 }
 
 extension CoordinatorCommonDelegate {
-    func backTapped() {}
-    func closeTapped() {}
+    public func backTapped() {}
+    public func closeTapped() {}
 }

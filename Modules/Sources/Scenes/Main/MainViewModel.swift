@@ -3,7 +3,13 @@ import Models
 import CoreUI
 import Foundation
 
-// MARK: - Protocol
+// MARK: - Protocols
+
+@MainActor
+public protocol MainViewModelCoordinatorDelegate: AnyObject {
+    func showDetailsScreen(for exchange: Exchange)
+}
+
 @MainActor
 public protocol MainViewModelProtocol: AnyObject {
 
@@ -14,6 +20,7 @@ public protocol MainViewModelProtocol: AnyObject {
     func item(at indexPath: IndexPath) -> MainTableViewDataRow
 
     func fetchExchanges() async throws
+    func didSelectRow(at indexPath: IndexPath)
 }
 
 // MARK: - View Model
@@ -38,16 +45,24 @@ public final class MainViewModel: ObservableObject {
         }
     }
     public var events = PassthroughSubject<Void, Never>()
+    private weak var coordinatorDelegate: MainViewModelCoordinatorDelegate?
 
     // MARK: - Initializer
 
-    public init(service: MainServiceProtocol) {
+    public init(
+        service: MainServiceProtocol,
+        coordinatorDelegate: MainViewModelCoordinatorDelegate?
+    ) {
         self.service = service
+        self.coordinatorDelegate = coordinatorDelegate
         tableViewData = MainTableViewData()
     }
 }
 
+// MARK: - MainViewModelProtocol
+
 extension MainViewModel: MainViewModelProtocol {
+
     public var numberOfSections: Int { tableViewData.sectionCount }
 
     public func numberOfItems(at section: Int) -> Int {
@@ -65,5 +80,9 @@ extension MainViewModel: MainViewModelProtocol {
         } catch {
             print(error)
         }
+    }
+
+    public func didSelectRow(at indexPath: IndexPath) {
+        coordinatorDelegate?.showDetailsScreen(for: exchanges[indexPath.row])
     }
 }

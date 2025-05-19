@@ -5,10 +5,12 @@ import UIKit
 public final class MainViewController: LoadableViewController<MainView> {
 
     // MARK: - Properties
+
     private let viewModel: MainViewModelProtocol
     private var cancellables = Set<AnyCancellable>()
 
     // MARK: - Init
+
     public init(viewModel: MainViewModelProtocol) {
         self.viewModel = viewModel
         super.init()
@@ -46,6 +48,8 @@ public final class MainViewController: LoadableViewController<MainView> {
     }
 }
 
+// MARK: - UITableViewDataSource
+
 extension MainViewController: UITableViewDataSource {
     public func numberOfSections(in tableView: UITableView) -> Int {
         viewModel.numberOfSections
@@ -73,6 +77,16 @@ extension MainViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
+
+extension MainViewController: UITableViewDelegate {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRow(at: indexPath)
+    }
+}
+
+// MARK: - UIHelper
+
 extension MainViewController: UIHelper {
     public func setupNavigationBar() {
         title = "Exchanges"
@@ -80,5 +94,6 @@ extension MainViewController: UIHelper {
 
     public func setupTableViews() {
         contentView.tableView.dataSource = self
+        contentView.tableView.delegate = self
     }
 }
