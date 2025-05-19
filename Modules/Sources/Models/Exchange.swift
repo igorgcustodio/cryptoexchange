@@ -1,20 +1,20 @@
 import Foundation
 
-public struct Exchange: Decodable {
-    public let exchangeId: String
-    public let website: String
-    public let name: String
-    public let dataQuoteStart: String
-    public let dataQuoteEnd: String
-    public let dataOrderbookStart: String
-    public let dataOrderbookEnd: String
-    public let dataTradeStart: String
-    public let dataTradeEnd: String
-    public let dataSymbolsCount: Int
-    public let volume1hrsUsd: Double
-    public let volume1dayUsd: Double
-    public let volume1mthUsd: Double
-    public let rank: Int
+public struct Exchange: Decodable, Equatable {
+    public let exchangeId: String?
+    public let website: String?
+    public let name: String?
+    public let dataQuoteStart: String?
+    public let dataQuoteEnd: String?
+    public let dataOrderbookStart: String?
+    public let dataOrderbookEnd: String?
+    public let dataTradeStart: String?
+    public let dataTradeEnd: String?
+    public let dataSymbolsCount: Int?
+    public let volume1hrsUsd: Double?
+    public let volume1dayUsd: Double?
+    public let volume1mthUsd: Double?
+    public let rank: Int?
 
     public enum CodingKeys: String, CodingKey {
         case exchangeId = "exchange_id"
