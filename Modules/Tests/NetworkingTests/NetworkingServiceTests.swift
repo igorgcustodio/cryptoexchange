@@ -2,6 +2,7 @@ import Foundation
 import Testing
 @testable import Networking
 
+@Suite
 struct NetworkingServiceTests {
     struct MockRoute: Networking.Route {
         let path: String = "/users/1"

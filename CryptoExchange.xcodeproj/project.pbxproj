@@ -31,9 +31,8 @@
 		2564DC8E2DD8266200C72C09 /* CryptoExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2564DCA42DD8266500C72C09 /* CryptoExchangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoExchangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2564DCAE2DD8266500C72C09 /* CryptoExchangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoExchangeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		25C678062DDAE27A0004655D /* CryptoExchange.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CryptoExchange.xctestplan; sourceTree = "<group>"; };
+		25C5C36E2DDAE6B600500657 /* CryptoExchangeTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CryptoExchangeTestPlan.xctestplan; sourceTree = "<group>"; };
 		25D6CBE52DD9882700D4B3E1 /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Modules; sourceTree = "<group>"; };
-		25D6FCFD2DDAE26700D4B3E1 /* CryptoExchange.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CryptoExchange.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -53,16 +52,6 @@
 				2564DCB62DD8266500C72C09 /* Exceptions for "CryptoExchange" folder in "CryptoExchange" target */,
 			);
 			path = CryptoExchange;
-			sourceTree = "<group>";
-		};
-		2564DCA72DD8266500C72C09 /* CryptoExchangeTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CryptoExchangeTests;
-			sourceTree = "<group>";
-		};
-		2564DCB12DD8266500C72C09 /* CryptoExchangeUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CryptoExchangeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -96,12 +85,9 @@
 		2564DC852DD8266200C72C09 = {
 			isa = PBXGroup;
 			children = (
-				25C678062DDAE27A0004655D /* CryptoExchange.xctestplan */,
-				25D6FCFD2DDAE26700D4B3E1 /* CryptoExchange.xctestplan */,
+				25C5C36E2DDAE6B600500657 /* CryptoExchangeTestPlan.xctestplan */,
 				25D6CBE52DD9882700D4B3E1 /* Modules */,
 				2564DC902DD8266200C72C09 /* CryptoExchange */,
-				2564DCA72DD8266500C72C09 /* CryptoExchangeTests */,
-				2564DCB12DD8266500C72C09 /* CryptoExchangeUITests */,
 				2564DC8F2DD8266200C72C09 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -155,9 +141,6 @@
 			dependencies = (
 				2564DCA62DD8266500C72C09 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				2564DCA72DD8266500C72C09 /* CryptoExchangeTests */,
-			);
 			name = CryptoExchangeTests;
 			packageProductDependencies = (
 			);
@@ -177,9 +160,6 @@
 			);
 			dependencies = (
 				2564DCB02DD8266500C72C09 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				2564DCB12DD8266500C72C09 /* CryptoExchangeUITests */,
 			);
 			name = CryptoExchangeUITests;
 			packageProductDependencies = (

@@ -54,7 +54,7 @@ public enum Networking {
 
         func buildRequest(defaultHeaders: [String: String] = DefaultHeaders.headers) throws -> URLRequest {
             guard var url = URL(string: baseUrl + route.path),
-                  var components = URLComponents(url: url, resolvingAgainstBaseURL: false),
+                  let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
                   let scheme = components.scheme?.lowercased(),
                   ["http", "https"].contains(scheme),
                   let host = components.host, !host.isEmpty
