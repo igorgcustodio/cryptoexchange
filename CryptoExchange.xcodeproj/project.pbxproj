@@ -109,6 +109,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2564DCB72DD8266500C72C09 /* Build configuration list for PBXNativeTarget "CryptoExchange" */;
 			buildPhases = (
+				25C5D3D72DDAEB8B00500657 /* Swift Lint */,
 				2564DC8A2DD8266200C72C09 /* Sources */,
 				2564DC8B2DD8266200C72C09 /* Frameworks */,
 				2564DC8C2DD8266200C72C09 /* Resources */,
@@ -238,6 +239,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25C5D3D72DDAEB8B00500657 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint autocorrect\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2564DC8A2DD8266200C72C09 /* Sources */ = {

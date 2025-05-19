@@ -1,0 +1,35 @@
+# file options
+
+--exclude careworkerappSnapshotTests,careworkerappTests,careworkerappUITests,docs,fastlane,mobile.common,scripts,*Test*.swift
+--swiftversion 5.7
+
+# See https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md
+
+# Disabled Rules
+
+--disable markTypes
+--disable wrap
+--disable wrapMultilineStatementBraces
+--disable yodaConditions
+
+# Opt-In Rules
+
+--enable blankLinesBetweenImports
+--enable isEmpty
+--enable sortSwitchCases
+--enable wrapConditionalBodies
+--enable wrapSwitchCases
+
+# Configuration
+
+--emptybraces spaced
+--extensionacl on-declarations
+--funcattributes prev-line
+--guardelse next-line
+--header strip
+--importgrouping testable-last
+--stripunusedargs closure-only
+--typeattributes prev-line
+--varattributes preserve
+--wraparguments before-first
+--wrapcollections before-first
