@@ -94,9 +94,6 @@ public enum Networking {
                 }
             }
 
-            print(request)
-            print(request.allHTTPHeaderFields)
-
             return request
         }
     }

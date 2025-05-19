@@ -1,10 +1,12 @@
 import CoreUI
+import Combine
 import UIKit
 
 public final class MainViewController: LoadableViewController<MainView> {
 
     // MARK: - Properties
     private let viewModel: MainViewModelProtocol
+    private var cancellables = Set<AnyCancellable>()
 
     // MARK: - Init
     public init(viewModel: MainViewModelProtocol) {
@@ -17,6 +19,7 @@ public final class MainViewController: LoadableViewController<MainView> {
     override public func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        setupBindings()
         Task {
             try await viewModel.fetchExchanges()
         }
@@ -28,11 +31,58 @@ public final class MainViewController: LoadableViewController<MainView> {
 
     // MARK: - Methods
 
+    private func setupBindings() {
+        viewModel
+            .events
+            .receive(on: RunLoop.main)
+            .sink { [weak self] in
+                print("reloading table view")
+                self?.contentView.tableView.reloadData()
+            }
+            .store(in: &cancellables)
+    }
+
     private func setup() {
         setupUI()
     }
 }
 
-extension MainViewController: UIHelper {
+extension MainViewController: UITableViewDataSource {
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        print(viewModel.numberOfSections)
+        return viewModel.numberOfSections
+    }
 
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(viewModel.numberOfItems(at: section))
+        return viewModel.numberOfItems(at: section)
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = viewModel.item(at: indexPath)
+
+        switch item {
+        case let .exchange(exchange):
+            print("dequeuing cell")
+            let cell: ExchangeTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.setup(
+                with: ExchangeTableViewCell.ViewData(
+                    name: exchange.name ?? "N/A",
+                    exchangeId: exchange.exchangeId ?? "N/A",
+                    volume1day: exchange.volume1dayUsd ?? -1
+                )
+            )
+            return cell
+        }
+    }
+}
+
+extension MainViewController: UIHelper {
+    public func setupNavigationBar() {
+        title = "Exchanges"
+    }
+
+    public func setupTableViews() {
+        contentView.tableView.dataSource = self
+    }
 }
