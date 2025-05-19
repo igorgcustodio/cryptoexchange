@@ -36,7 +36,6 @@ public final class MainViewController: LoadableViewController<MainView> {
             .events
             .receive(on: RunLoop.main)
             .sink { [weak self] in
-                print("reloading table view")
                 self?.contentView.tableView.reloadData()
             }
             .store(in: &cancellables)
@@ -49,13 +48,11 @@ public final class MainViewController: LoadableViewController<MainView> {
 
 extension MainViewController: UITableViewDataSource {
     public func numberOfSections(in tableView: UITableView) -> Int {
-        print(viewModel.numberOfSections)
-        return viewModel.numberOfSections
+        viewModel.numberOfSections
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(viewModel.numberOfItems(at: section))
-        return viewModel.numberOfItems(at: section)
+        viewModel.numberOfItems(at: section)
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,7 +60,6 @@ extension MainViewController: UITableViewDataSource {
 
         switch item {
         case let .exchange(exchange):
-            print("dequeuing cell")
             let cell: ExchangeTableViewCell = tableView.dequeueReusableCell(for: indexPath)
             cell.setup(
                 with: ExchangeTableViewCell.ViewData(
