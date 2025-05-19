@@ -6,3 +6,5 @@ DerivedData/
 Modules/.swiftpm/configuration/registries.json
 Modules/.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 .netrc
+.env
+Modules/Sources/Networking/Generated/Environment.swift

@@ -258,7 +258,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint autocorrect\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "#!/bin/bash\n\ncd \"$SRCROOT\"\n\nSWIFTLINT=\"/opt/homebrew/bin/swiftlint\"\nCONFIG_FILE=\"swiftlint.yml\"\n\necho \"📦 Running SwiftLint\"\necho \"📄 Config: $CONFIG_FILE\"\n\necho \"🧪 Trying to cat the file...\"\ncat \"$CONFIG_FILE\"\n\n# Ensure SwiftLint exists and config file is readable\nif [ ! -x \"$SWIFTLINT\" ]; then\n  echo \"❌ SwiftLint not found at $SWIFTLINT\"\n  exit 0  # Don't fail the build\nfi\n\nif [ ! -r \"$CONFIG_FILE\" ]; then\n  echo \"❌ Cannot read SwiftLint config at $CONFIG_FILE\"\n  exit 0\nfi\n\n# Run SwiftLint\n\"$SWIFTLINT\" --config \"$CONFIG_FILE\"\n\necho \"✅ SwiftLint finished\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
