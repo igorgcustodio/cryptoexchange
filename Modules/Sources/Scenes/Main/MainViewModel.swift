@@ -4,7 +4,7 @@ import CoreUI
 import Foundation
 
 // MARK: - Protocol
-
+@MainActor
 public protocol MainViewModelProtocol: AnyObject {
 
     var events: PassthroughSubject<Void, Never> { get }
@@ -60,10 +60,7 @@ extension MainViewModel: MainViewModelProtocol {
 
     public func fetchExchanges() async throws {
         do {
-            print("fetching")
             let exchanges = try await service.fetchExchanges()
-//            print(exchanges)
-            print("fetched")
             self.exchanges = exchanges
         } catch {
             print(error)

@@ -20,7 +20,9 @@ extension Networking {
             }
 
             do {
-                return try try JSONDecoder().decode(T.self, from: data)
+                return try await Task.detached {
+                    return try JSONDecoder().decode(T.self, from: data)
+                }.value
             } catch let error as DecodingError {
                 throw ResponseError.decodingFailed(underlyingError: error)
             } catch {
