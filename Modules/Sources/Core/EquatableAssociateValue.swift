@@ -1,7 +1,7 @@
 import Foundation
 
 /// Protocol to compare enums with associate values.
-public protocol EquatableAssociateValue: Equatable {}
+public protocol EquatableAssociateValue: Equatable { }
 
 extension EquatableAssociateValue {
     public var rawValue: String {

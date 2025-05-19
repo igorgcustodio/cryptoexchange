@@ -3,8 +3,8 @@ import DesignSystem
 import UIKit
 
 public final class MainView: UIView {
-
     // MARK: - UI Properties
+
     lazy var tableView: UITableView = .buildTableView(
         isScrollEnabled: true,
         style: .plain,

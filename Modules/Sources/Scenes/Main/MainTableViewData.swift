@@ -1,6 +1,6 @@
 import CoreUI
-import Models
 import Foundation
+import Models
 
 public enum MainTableViewDataSection: TableViewEnumType {
     case exchanges

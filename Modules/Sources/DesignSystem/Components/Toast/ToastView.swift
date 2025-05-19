@@ -2,7 +2,6 @@ import CoreUI
 import UIKit
 
 final class ToastView: UIView {
-
     struct Content {
         let text: String
     }
@@ -52,7 +51,7 @@ extension ToastView: ViewCodeConfiguration {
             descriptionLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 16),
             descriptionLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 16),
             descriptionLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -16),
-            descriptionLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -16)
+            descriptionLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -16),
         ])
     }
 }
@@ -67,4 +66,3 @@ extension ToastView {
         return view
     }
 }
-

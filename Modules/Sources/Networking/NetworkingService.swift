@@ -21,7 +21,7 @@ extension Networking {
 
             do {
                 return try await Task.detached {
-                    return try JSONDecoder().decode(T.self, from: data)
+                    try JSONDecoder().decode(T.self, from: data)
                 }.value
             } catch let error as DecodingError {
                 throw ResponseError.decodingFailed(underlyingError: error)
@@ -42,16 +42,15 @@ extension Networking {
             }
 
             switch response.statusCode {
-            case 200..<300:
+            case 200 ..< 300:
                 return data
-            case 400..<500:
+            case 400 ..< 500:
                 throw ResponseError.clientError(code: response.statusCode)
-            case 500..<600:
+            case 500 ..< 600:
                 throw ResponseError.serverError(code: response.statusCode)
             default:
                 throw ResponseError.unexpected
             }
-
         }
     }
 }

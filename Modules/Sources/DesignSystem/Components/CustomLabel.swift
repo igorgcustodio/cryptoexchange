@@ -1,7 +1,6 @@
 import UIKit
 
 public final class CustomLabel: UILabel {
-
     private let color: UIColor
 
     public init(

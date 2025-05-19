@@ -26,13 +26,13 @@ extension UIHelper {
         setupNavigationBar()
     }
 
-    public func setupViews() {}
-    public func setupLabels() {}
-    public func setupButtons() {}
-    public func setupImages() {}
-    public func setupTableViews() {}
-    public func setupCollectionViews() {}
-    public func setupTextFields() {}
-    public func setupTextViews() {}
-    public func setupNavigationBar() {}
+    public func setupViews() { }
+    public func setupLabels() { }
+    public func setupButtons() { }
+    public func setupImages() { }
+    public func setupTableViews() { }
+    public func setupCollectionViews() { }
+    public func setupTextFields() { }
+    public func setupTextViews() { }
+    public func setupNavigationBar() { }
 }

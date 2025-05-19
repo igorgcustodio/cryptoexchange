@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "CryptoExchange",
     platforms: [
-        .iOS(.v15)
+        .iOS(.v15),
     ],
     products: [
         .library(name: "Umbrella", targets: ["Umbrella"]),
@@ -33,7 +33,7 @@ let package = Package(
         .target(
             name: "CoreUI",
             dependencies: [
-                "Core"
+                "Core",
             ]
         ),
         .target(name: "Networking"),
@@ -54,7 +54,7 @@ let package = Package(
                 "CoreUI",
                 "DesignSystem",
                 "Models",
-                "Networking"
+                "Networking",
             ]
         ),
         .target(

@@ -1,7 +1,6 @@
 import UIKit
 
 open class CustomButton: UIButton {
-
     // MARK: - Init
 
     public init(title: String) {
@@ -11,7 +10,7 @@ open class CustomButton: UIButton {
     }
 
     @available(*, unavailable)
-    required public init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -72,7 +71,6 @@ extension CustomButton {
 // MARK: - Constants and ViewData
 
 extension CustomButton {
-
     // MARK: - Animation Config
 
     enum Config {

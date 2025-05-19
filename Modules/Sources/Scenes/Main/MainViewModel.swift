@@ -1,7 +1,7 @@
 import Combine
-import Models
 import CoreUI
 import Foundation
+import Models
 
 // MARK: - Protocols
 
@@ -12,7 +12,6 @@ public protocol MainViewModelCoordinatorDelegate: AnyObject {
 
 @MainActor
 public protocol MainViewModelProtocol: AnyObject {
-
     var events: PassthroughSubject<Void, Never> { get }
     var numberOfSections: Int { get }
 
@@ -27,7 +26,6 @@ public protocol MainViewModelProtocol: AnyObject {
 
 @MainActor
 public final class MainViewModel: ObservableObject {
-
     // MARK: - Properties
 
     private let service: MainServiceProtocol
@@ -39,11 +37,13 @@ public final class MainViewModel: ObservableObject {
                 sections: TableViewDataSection(
                     rows: exchanges.map { .exchange($0) },
                     type: .exchanges,
-                    visible: true)
+                    visible: true
+                )
             )
             events.send()
         }
     }
+
     public var events = PassthroughSubject<Void, Never>()
     private weak var coordinatorDelegate: MainViewModelCoordinatorDelegate?
 
@@ -62,7 +62,6 @@ public final class MainViewModel: ObservableObject {
 // MARK: - MainViewModelProtocol
 
 extension MainViewModel: MainViewModelProtocol {
-
     public var numberOfSections: Int { tableViewData.sectionCount }
 
     public func numberOfItems(at section: Int) -> Int {

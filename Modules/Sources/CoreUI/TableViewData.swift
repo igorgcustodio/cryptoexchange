@@ -15,7 +15,7 @@ import Foundation
 open class TableViewData<W: TableViewEnumType, U: TableViewEnumType> {
     public typealias DataSection = TableViewDataSection<W, U>
 
-    public init() {}
+    public init() { }
 
     public private(set) var sections: [DataSection] = []
 
@@ -74,7 +74,7 @@ open class TableViewData<W: TableViewEnumType, U: TableViewEnumType> {
     }
 }
 
-public protocol TableViewEnumType: EquatableAssociateValue {}
+public protocol TableViewEnumType: EquatableAssociateValue { }
 
 /// Struct to handle data in each section of table view
 /// - Params:

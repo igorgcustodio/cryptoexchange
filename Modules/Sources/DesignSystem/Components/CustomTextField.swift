@@ -1,7 +1,6 @@
 import UIKit
 
 final class CustomTextField: UITextField {
-
     let insets: UIEdgeInsets
 
     init(
@@ -21,11 +20,11 @@ final class CustomTextField: UITextField {
     }
 
     override func textRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.inset(by: insets)
+        bounds.inset(by: insets)
     }
 
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.inset(by: insets)
+        bounds.inset(by: insets)
     }
 
     private func setupView() {
@@ -44,7 +43,7 @@ final class CustomTextField: UITextField {
             view.heightAnchor.constraint(equalToConstant: 1),
             view.bottomAnchor.constraint(equalTo: bottomAnchor),
             view.leadingAnchor.constraint(equalTo: leadingAnchor),
-            view.trailingAnchor.constraint(equalTo: trailingAnchor)
+            view.trailingAnchor.constraint(equalTo: trailingAnchor),
         ])
     }
 }

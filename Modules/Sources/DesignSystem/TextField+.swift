@@ -5,7 +5,7 @@ extension UITextField {
         placeholder: String? = nil,
         keyboardType: UIKeyboardType = .default
     ) -> UITextField {
-        let textField: CustomTextField = CustomTextField(
+        let textField = CustomTextField(
             keyboardType: keyboardType,
             placeholder: placeholder
         )
@@ -17,4 +17,3 @@ extension UITextField {
         return textField
     }
 }
-

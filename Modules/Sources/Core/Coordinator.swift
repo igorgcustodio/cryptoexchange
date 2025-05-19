@@ -2,7 +2,6 @@ import UIKit
 
 @MainActor
 public protocol Coordinator: AnyObject {
-
     // MARK: - Properties
 
     var navigationController: UINavigationController? { get set }
@@ -59,6 +58,6 @@ public protocol CoordinatorCommonDelegate: AnyObject {
 }
 
 extension CoordinatorCommonDelegate {
-    public func backTapped() {}
-    public func closeTapped() {}
+    public func backTapped() { }
+    public func closeTapped() { }
 }

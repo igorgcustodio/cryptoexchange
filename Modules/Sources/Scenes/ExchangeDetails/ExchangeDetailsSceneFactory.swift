@@ -1,6 +1,6 @@
 import Core
-import UIKit
 import Models
+import UIKit
 
 @MainActor
 public protocol ExchangeDetailsSceneBuilding {
@@ -12,8 +12,7 @@ public protocol ExchangeDetailsSceneBuilding {
 
 @MainActor
 public final class ExchangeDetailsSceneFactory: ExchangeDetailsSceneBuilding {
-
-    public init() {}
+    public init() { }
 
     public func makeExchangeDetailsScene(
         exchange: Exchange,

@@ -1,9 +1,8 @@
-import DesignSystem
 import CoreUI
+import DesignSystem
 import UIKit
 
 final class ExchangeTableViewCell: UITableViewCell, ReusableIdentifier {
-
     // MARK: - View Data
 
     struct ViewData {
@@ -20,6 +19,7 @@ final class ExchangeTableViewCell: UITableViewCell, ReusableIdentifier {
     private lazy var exchangeLabel: UILabel = .buildLabel(color: .black)
 
     // MARK: - Lifecycle
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViewCode()
@@ -50,7 +50,7 @@ extension ExchangeTableViewCell: ViewCodeConfiguration {
     func setupViewHierarchy() {
         contentView.addSubview(container)
         container.addSubviews([
-            nameLabel, volumeLabel, exchangeLabel
+            nameLabel, volumeLabel, exchangeLabel,
         ])
     }
 
@@ -60,7 +60,7 @@ extension ExchangeTableViewCell: ViewCodeConfiguration {
             container.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             container.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             container.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            
+
             nameLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 8),
             nameLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 8),
             nameLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -8),
@@ -76,7 +76,5 @@ extension ExchangeTableViewCell: ViewCodeConfiguration {
         ])
     }
 
-    func configureViews() {
-
-    }
+    func configureViews() { }
 }

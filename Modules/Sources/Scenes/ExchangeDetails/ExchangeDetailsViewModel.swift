@@ -1,19 +1,16 @@
-import Foundation
 import Core
+import Foundation
 import Models
 
 // MARK: - Protocols
 
 @MainActor
-public protocol ExchangeDetailsViewModelProtocol {
-
-}
+public protocol ExchangeDetailsViewModelProtocol { }
 
 // MARK: - View Model
 
 @MainActor
 public final class ExchangeDetailsViewModel {
-
     private let exchange: Exchange
     private weak var coordinatorDelegte: CoordinatorCommonDelegate?
 
@@ -23,6 +20,4 @@ public final class ExchangeDetailsViewModel {
     }
 }
 
-extension ExchangeDetailsViewModel: ExchangeDetailsViewModelProtocol {
-
-}
+extension ExchangeDetailsViewModel: ExchangeDetailsViewModelProtocol { }

@@ -16,8 +16,8 @@ extension ViewCodeConfiguration {
         setupAccessibility()
     }
 
-    public func setupViewHierarchy() {}
-    public func setupConstraints() {}
-    public func configureViews() {}
-    public func setupAccessibility() {}
+    public func setupViewHierarchy() { }
+    public func setupConstraints() { }
+    public func configureViews() { }
+    public func setupAccessibility() { }
 }

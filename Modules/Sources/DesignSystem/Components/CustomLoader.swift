@@ -1,7 +1,6 @@
 import UIKit
 
 public final class CustomLoader: UIView {
-
     public static let shared = CustomLoader()
     private var baseView: UIView?
     private var isShowing = false
@@ -21,7 +20,7 @@ public final class CustomLoader: UIView {
         // of the view and properly handle rotation.
         indicator.autoresizingMask = [
             .flexibleLeftMargin, .flexibleRightMargin,
-            .flexibleTopMargin, .flexibleBottomMargin
+            .flexibleTopMargin, .flexibleBottomMargin,
         ]
 
         return indicator
@@ -34,7 +33,7 @@ public final class CustomLoader: UIView {
         blurEffectView.alpha = 0.5
 
         blurEffectView.autoresizingMask = [
-            .flexibleWidth, .flexibleHeight
+            .flexibleWidth, .flexibleHeight,
         ]
 
         return blurEffectView
@@ -42,7 +41,9 @@ public final class CustomLoader: UIView {
 
     @MainActor
     public func start(in view: UIView) {
-        guard !isShowing else { return }
+        guard !isShowing else {
+            return
+        }
         isShowing = true
         addLoaderTo(to: view)
     }
@@ -71,7 +72,6 @@ public final class CustomLoader: UIView {
             baseView.addSubview(loadingActivityIndicator)
             view.addSubview(baseView)
         }
-
     }
 
     @MainActor
@@ -91,7 +91,7 @@ public final class CustomLoader: UIView {
 extension UIViewController {
     @MainActor
     public func startLoader() {
-        CustomLoader.shared.start(in: self.view)
+        CustomLoader.shared.start(in: view)
     }
 
     @MainActor

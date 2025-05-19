@@ -1,6 +1,6 @@
 import Foundation
 
-public struct KeyConfig {
+public enum KeyConfig {
     public static let baseURL = "https://rest.coinapi.io/v1/"
     //    public static let apiKey = "b1b02354-5e7b-4062-bb8e-1e1d86e9fa21"
     public static let apiKey = "3807A772-1841-409F-B8DA-5A2E2110A687"

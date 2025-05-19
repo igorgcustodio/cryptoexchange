@@ -2,7 +2,6 @@ import CoreUI
 import UIKit
 
 extension UITableView {
-
     public static func buildTableView(
         isScrollEnabled: Bool = true,
         style: Style = .plain,
@@ -15,7 +14,7 @@ extension UITableView {
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
         tableView.isScrollEnabled = isScrollEnabled
-        if let allowsSelection  {
+        if let allowsSelection {
             tableView.allowsSelection = allowsSelection
         }
 
@@ -33,6 +32,4 @@ extension UITableView {
 
         return cell
     }
-
-
 }

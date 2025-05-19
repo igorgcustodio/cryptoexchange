@@ -1,11 +1,10 @@
 import UIKit
 
 extension UIView {
-
     static var keyWindow: UIWindow? {
         UIApplication.shared.connectedScenes
             .compactMap { $0 as? UIWindowScene }
-            .flatMap { $0.windows }
+            .flatMap(\.windows)
             .first { $0.isKeyWindow }
     }
 

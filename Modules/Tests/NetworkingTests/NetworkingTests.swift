@@ -1,6 +1,5 @@
-import Testing
 import Foundation
-
+import Testing
 @testable import Networking
 
 @Suite
@@ -21,7 +20,7 @@ struct RequestBuilderTests {
     }
 
     @Test("buildRequest() returns a valid URLRequest for a well-formed route")
-    func testValidRequest() throws {
+    func validRequest() throws {
         // Given
         let route = MockRoute()
         let baseUrl = "https://api.example.com"
@@ -46,7 +45,7 @@ struct RequestBuilderTests {
     }
 
     @Test("buildRequest() throws badUrl error for malformed base URL")
-    func testBadURLThrows() {
+    func badURLThrows() {
         struct BadRoute: Networking.Route {
             var path: String = "/test"
             var method: Networking.Method = .GET

@@ -1,9 +1,8 @@
-import CoreUI
 import Combine
+import CoreUI
 import UIKit
 
 public final class MainViewController: LoadableViewController<MainView> {
-
     // MARK: - Properties
 
     private let viewModel: MainViewModelProtocol
@@ -58,7 +57,7 @@ extension MainViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.numberOfItems(at: section)
     }
-    
+
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = viewModel.item(at: indexPath)
 

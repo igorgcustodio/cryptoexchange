@@ -18,7 +18,7 @@ struct NetworkingServiceTests {
         var error: Error?
 
         func data(for request: URLRequest) async throws -> (Data, URLResponse) {
-            if let error = error {
+            if let error {
                 throw error
             }
             if let (data, response) = dataResult {
@@ -29,7 +29,7 @@ struct NetworkingServiceTests {
     }
 
     @Test("Successful response returns decoded model")
-    func testSuccessfulDecoding() async throws {
+    func successfulDecoding() async throws {
         struct User: Codable, Equatable {
             let id: Int
         }
@@ -51,7 +51,7 @@ struct NetworkingServiceTests {
     }
 
     @Test("Non-HTTPURLResponse throws noResponse error")
-    func testNoResponseError() async throws {
+    func noResponseError() async throws {
         let data = Data()
         let nonHTTPResponse = URLResponse(
             url: URL(string: "http://example.com")!,
@@ -90,7 +90,7 @@ struct NetworkingServiceTests {
             _ = try await service.request(MockRoute())
             #expect(false, "Expected clientError error")
         } catch let error as Networking.ResponseError {
-            if case .clientError(let code) = error {
+            if case let .clientError(code) = error {
                 #expect(code == 404)
             } else {
                 #expect(false, "Expected clientError but got \(error)")
@@ -116,7 +116,7 @@ struct NetworkingServiceTests {
             _ = try await service.request(MockRoute())
             #expect(false, "Expected serverError error")
         } catch let error as Networking.ResponseError {
-            if case .serverError(let code) = error {
+            if case let .serverError(code) = error {
                 #expect(code == 500)
             } else {
                 #expect(false, "Expected serverError but got \(error)")

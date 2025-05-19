@@ -1,7 +1,6 @@
 import Foundation
 
 public enum ExchangeRoutes: Networking.Route {
-
     case fetchAll
 
     public var path: String {

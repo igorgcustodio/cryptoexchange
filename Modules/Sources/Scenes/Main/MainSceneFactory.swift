@@ -7,7 +7,6 @@ public protocol MainSceneBuilding {
 
 @MainActor
 public final class MainSeceneFactory: MainSceneBuilding {
-
     public init() { }
 
     public func makeMainScene(coordinatorDelegate: MainViewModelCoordinatorDelegate?) -> UIViewController {

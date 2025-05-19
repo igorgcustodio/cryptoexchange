@@ -1,7 +1,6 @@
 import UIKit
 
 final class Toast {
-
     // MARK: - Properties
 
     private static var toast: ToastView?
@@ -20,7 +19,7 @@ final class Toast {
 
     // MARK: - Methods
 
-    public init() {}
+    public init() { }
 
     /// Display a toast at the top of the screen
     ///
@@ -43,15 +42,19 @@ final class Toast {
         self.automaticDismiss = automaticDismiss
         self.toast = .init(content: content, frame: frame)
 
-        guard let toast = self.toast else { return }
+        guard let toast else {
+            return
+        }
         currentWindow.addSubview(toast)
-        self.setupToastInteraction()
-        self.presentToast()
+        setupToastInteraction()
+        presentToast()
     }
 
     /// Dismiss the toast
     public static func dismissToast() {
-        guard let toast = toast else { return }
+        guard let toast else {
+            return
+        }
         UIView.animate(withDuration: 5, animations: {
             toast.transform = CGAffineTransform(translationX: .zero, y: -toast.frame.maxY)
         }, completion: { _ in
@@ -63,7 +66,8 @@ final class Toast {
 // MARK: - Interaction handler
 
 extension Toast {
-    @objc private static func closeToast() {
+    @objc
+    private static func closeToast() {
         dismissToast()
         finish()
     }
@@ -80,7 +84,9 @@ extension Toast {
     }
 
     private static func presentToast() {
-        guard let toast = toast else { return }
+        guard let toast else {
+            return
+        }
 
         toast.transform = CGAffineTransform(translationX: .zero, y: -toast.frame.maxY)
         UIView.animate(withDuration: 5, animations: {

@@ -11,17 +11,16 @@ extension UIColor {
 
         scanner.scanHexInt64(&rgbValue)
 
-        let r = (rgbValue & 0xff0000) >> 16
-        let g = (rgbValue & 0xff00) >> 8
-        let b = rgbValue & 0xff
+        let r = (rgbValue & 0xFF0000) >> 16
+        let g = (rgbValue & 0xFF00) >> 8
+        let b = rgbValue & 0xFF
 
         self.init(
-            red: CGFloat(r) / 0xff,
-            green: CGFloat(g) / 0xff,
-            blue: CGFloat(b) / 0xff, alpha: 1
+            red: CGFloat(r) / 0xFF,
+            green: CGFloat(g) / 0xFF,
+            blue: CGFloat(b) / 0xFF, alpha: 1
         )
     }
-
 
     public var isDarkColor: Bool {
         luminosity < 0.50

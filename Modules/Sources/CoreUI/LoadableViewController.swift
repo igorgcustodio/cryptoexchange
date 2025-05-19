@@ -1,7 +1,6 @@
 import UIKit
 
 open class LoadableViewController<ContentView: UIView>: UIViewController {
-
     public var contentView = ContentView()
 
     override open func loadView() {

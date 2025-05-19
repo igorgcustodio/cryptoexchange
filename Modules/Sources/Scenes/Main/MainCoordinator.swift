@@ -1,10 +1,9 @@
 import Core
-import UIKit
 import Models
+import UIKit
 
 @MainActor
 public final class MainCoordinator: Coordinator {
-
     public var navigationController: UINavigationController?
     private let sceneFactory: SceneFactory
 

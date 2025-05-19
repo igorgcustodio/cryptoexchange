@@ -8,6 +8,6 @@ public protocol MainServiceProtocol: AnyObject {
 
 public final class MainService: NetworkingService<ExchangeRoutes>, MainServiceProtocol {
     public func fetchExchanges() async throws -> [Exchange] {
-        return try await request(.fetchAll)
-     }
+        try await request(.fetchAll)
+    }
 }
