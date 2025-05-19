@@ -1,17 +1,25 @@
 import Core
 import UIKit
+import Models
 
 @MainActor
 public protocol ExchangeDetailsSceneBuilding {
-    func makeExchangeDetailsScene(coordinatorDelegate: CoordinatorCommonDelegate?) -> UIViewController
+    func makeExchangeDetailsScene(
+        exchange: Exchange,
+        coordinatorDelegate: CoordinatorCommonDelegate?
+    ) -> UIViewController
 }
 
 @MainActor
 public final class ExchangeDetailsSceneFactory: ExchangeDetailsSceneBuilding {
+
     public init() {}
 
-    public func makeExchangeDetailsScene(coordinatorDelegate: CoordinatorCommonDelegate?) -> UIViewController {
-        let viewModel = ExchangeDetailsViewModel(coordinatorDelegte: coordinatorDelegate)
+    public func makeExchangeDetailsScene(
+        exchange: Exchange,
+        coordinatorDelegate: CoordinatorCommonDelegate?
+    ) -> UIViewController {
+        let viewModel = ExchangeDetailsViewModel(exchange: exchange, coordinatorDelegte: coordinatorDelegate)
         return ExchangeDetailsViewController(viewModel: viewModel)
     }
 }

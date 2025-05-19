@@ -1,5 +1,6 @@
 import Foundation
 import Core
+import Models
 
 // MARK: - Protocols
 
@@ -13,9 +14,11 @@ public protocol ExchangeDetailsViewModelProtocol {
 @MainActor
 public final class ExchangeDetailsViewModel {
 
+    private let exchange: Exchange
     private weak var coordinatorDelegte: CoordinatorCommonDelegate?
 
-    init(coordinatorDelegte: CoordinatorCommonDelegate?) {
+    init(exchange: Exchange, coordinatorDelegte: CoordinatorCommonDelegate?) {
+        self.exchange = exchange
         self.coordinatorDelegte = coordinatorDelegte
     }
 }

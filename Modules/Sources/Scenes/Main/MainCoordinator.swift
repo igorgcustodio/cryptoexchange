@@ -24,7 +24,12 @@ public final class MainCoordinator: Coordinator {
 
 extension MainCoordinator: MainViewModelCoordinatorDelegate {
     public func showDetailsScreen(for exchange: Exchange) {
-        let viewController = sceneFactory.exchangeDetailsFactory.makeExchangeDetailsScene(coordinatorDelegate: self)
+        let viewController = sceneFactory
+            .exchangeDetailsFactory
+            .makeExchangeDetailsScene(
+                exchange: exchange,
+                coordinatorDelegate: self
+            )
         handlePresentation(of: viewController, presentationStyle: .push)
     }
 }
