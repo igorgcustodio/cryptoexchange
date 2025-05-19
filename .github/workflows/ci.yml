@@ -1,0 +1,27 @@
+name: iOS CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v3
+
+      - name: 📦 Install SwiftLint and setup environment
+        run: |
+          brew install swiftlint
+          make env
+
+      - name: 🧪 Build and Test
+        run: |
+          xcodebuild clean build test \
+            -project CryptoExchange.xcodeproj \
+            -scheme CryptoExchange \
+            -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.4'
