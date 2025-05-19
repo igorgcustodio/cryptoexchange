@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: macos-latest
+    runs-on: macos-15
 
     steps:
       - name: 📥 Checkout repository
@@ -17,7 +17,7 @@ jobs:
       - name: 🔐 Generate .env from secrets
         run: |
           echo "API_KEY=${{ secrets.API_KEY }}" >> .env
-          echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
+          echo "BASE_URL=${{ env.BASE_URL }}" >> .env
 
       - name: 📦 Install SwiftLint and setup environment
         run: |
