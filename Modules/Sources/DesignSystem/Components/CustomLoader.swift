@@ -11,8 +11,6 @@ public final class CustomLoader: UIView {
         indicator.style = .medium
         indicator.color = .white
 
-        // The indicator should be animating when
-        // the view appears.
         indicator.startAnimating()
 
         // Setting the autoresizing mask to flexible for all

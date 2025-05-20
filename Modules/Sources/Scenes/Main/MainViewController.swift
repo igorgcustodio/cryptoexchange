@@ -1,5 +1,6 @@
 import Combine
 import CoreUI
+import DesignSystem
 import UIKit
 
 public final class MainViewController: LoadableViewController<MainView> {
@@ -36,14 +37,31 @@ public final class MainViewController: LoadableViewController<MainView> {
         viewModel
             .events
             .receive(on: RunLoop.main)
-            .sink { [weak self] in
-                self?.contentView.tableView.reloadData()
+            .sink { [weak self] event in
+                self?.handleStates(with: event)
             }
             .store(in: &cancellables)
     }
 
     private func setup() {
         setupUI()
+    }
+
+    private func handleStates(with event: MainViewModelState) {
+        switch event {
+        case .loading:
+            startLoader()
+        case .loaded:
+            stopLoader()
+            contentView.tableView.reloadData()
+        case let .failed(message):
+            stopLoader()
+            ToastView.show(
+                text: message,
+                in: view,
+                automaticDismiss: false
+            )
+        }
     }
 }
 

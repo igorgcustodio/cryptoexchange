@@ -12,7 +12,7 @@ public protocol MainViewModelCoordinatorDelegate: AnyObject {
 
 @MainActor
 public protocol MainViewModelProtocol: AnyObject {
-    var events: PassthroughSubject<Void, Never> { get }
+    var events: PassthroughSubject<MainViewModelState, Never> { get }
     var numberOfSections: Int { get }
 
     func numberOfItems(at section: Int) -> Int
@@ -20,6 +20,14 @@ public protocol MainViewModelProtocol: AnyObject {
 
     func fetchExchanges() async throws
     func didSelectRow(at indexPath: IndexPath)
+}
+
+// MARK: - State
+
+public enum MainViewModelState: Sendable, Equatable {
+    case loading
+    case loaded
+    case failed(String)
 }
 
 // MARK: - View Model
@@ -40,11 +48,11 @@ public final class MainViewModel: ObservableObject {
                     visible: true
                 )
             )
-            events.send()
+            events.send(.loaded)
         }
     }
 
-    public var events = PassthroughSubject<Void, Never>()
+    public var events = PassthroughSubject<MainViewModelState, Never>()
     private weak var coordinatorDelegate: MainViewModelCoordinatorDelegate?
 
     // MARK: - Initializer
@@ -74,10 +82,10 @@ extension MainViewModel: MainViewModelProtocol {
 
     public func fetchExchanges() async throws {
         do {
-            let exchanges = try await service.fetchExchanges()
-            self.exchanges = exchanges
+            events.send(.loading)
+            exchanges = try await service.fetchExchanges()
         } catch {
-            print(error)
+            events.send(.failed("Failed to fetch exchanges"))
         }
     }
 

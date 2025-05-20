@@ -22,6 +22,6 @@ public final class CustomLabel: UILabel {
 extension CustomLabel {
     private func setupView() {
         translatesAutoresizingMaskIntoConstraints = false
-        tintColor = color
+        textColor = color
     }
 }
