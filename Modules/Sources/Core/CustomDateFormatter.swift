@@ -1,7 +1,6 @@
 import Foundation
 
 extension DateFormatter {
-
     /// This date formatter parses date in format `yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ`
     /// Example: `2017-12-18T00:00:00.0000000Z`
     public static var customDateFormatter: DateFormatter = {

@@ -2,13 +2,11 @@ import Combine
 import Foundation
 import Models
 import Testing
-
 @testable import Scenes
 
 @Suite
 @MainActor
 struct MainViewModelTests {
-
     @Test
     func fetchExchanges_success() async throws {
         let mockService = MockMainServiceProtocol(result: .success([.mock()]))

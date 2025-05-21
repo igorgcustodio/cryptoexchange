@@ -75,8 +75,8 @@ extension ToastView {
     }
 }
 
-public extension ToastView {
-    static func show(
+extension ToastView {
+    public static func show(
         text: String,
         in parentView: UIView,
         automaticDismiss: Bool = true
@@ -89,7 +89,7 @@ public extension ToastView {
             toast.leadingAnchor.constraint(equalTo: parentView.safeAreaLayoutGuide.leadingAnchor, constant: 8),
             toast.trailingAnchor.constraint(equalTo: parentView.safeAreaLayoutGuide.trailingAnchor, constant: -8),
             toast.topAnchor.constraint(equalTo: parentView.safeAreaLayoutGuide.topAnchor, constant: 8),
-            toast.heightAnchor.constraint(equalToConstant: 80)
+            toast.heightAnchor.constraint(equalToConstant: 80),
         ])
 
         toast.alpha = 0
@@ -119,7 +119,8 @@ public extension ToastView {
         addGestureRecognizer(tap)
     }
 
-    @objc private func handleDismiss(_ gesture: UIGestureRecognizer) {
+    @objc
+    private func handleDismiss(_ gesture: UIGestureRecognizer) {
         dismiss()
     }
 

@@ -13,7 +13,6 @@ public protocol ExchangeDetailsViewModelProtocol {
 
 @MainActor
 public final class ExchangeDetailsViewModel {
-
     // MARK: - Properties
 
     public private(set) var exchange: Exchange
@@ -28,4 +27,5 @@ public final class ExchangeDetailsViewModel {
 }
 
 // MARK: - ExchangeDetailsViewModelProtocol
+
 extension ExchangeDetailsViewModel: ExchangeDetailsViewModelProtocol { }

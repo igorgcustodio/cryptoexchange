@@ -18,7 +18,6 @@ let package = Package(
     ],
     dependencies: [],
     targets: [
-
         // MARK: - Umbrella
 
         .target(
@@ -78,7 +77,7 @@ let package = Package(
         .testTarget(
             name: "ScenesTest",
             dependencies: [
-                "Scenes"
+                "Scenes",
             ]
         ),
 

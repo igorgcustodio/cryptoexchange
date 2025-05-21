@@ -2,7 +2,6 @@ import CoreUI
 import UIKit
 
 public final class ExchangeDetailsViewController: LoadableViewController<ExchangeDetailsView> {
-
     // MARK: - Properties
 
     private let viewModel: ExchangeDetailsViewModelProtocol
@@ -14,7 +13,7 @@ public final class ExchangeDetailsViewController: LoadableViewController<Exchang
         super.init()
     }
 
-    public override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         bind()
     }
@@ -27,6 +26,7 @@ public final class ExchangeDetailsViewController: LoadableViewController<Exchang
         contentView.exchangeIdLabel.text = data.exchangeId
 
         // MARK: - Metadata Section
+
         contentView.addRow(
             to: contentView.metadataSection,
             icon: UIImage(systemName: "globe"),
@@ -84,6 +84,7 @@ public final class ExchangeDetailsViewController: LoadableViewController<Exchang
         )
 
         // MARK: - Volume Section
+
         contentView.addRow(
             to: contentView.volumeSection,
             icon: UIImage(systemName: "clock"),

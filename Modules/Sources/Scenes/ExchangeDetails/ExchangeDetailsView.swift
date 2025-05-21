@@ -4,7 +4,6 @@ import DesignSystem
 import UIKit
 
 public final class ExchangeDetailsView: UIView {
-
     // MARK: - UI Properties
 
     public private(set) lazy var nameLabel: UILabel = {
@@ -75,7 +74,7 @@ public final class ExchangeDetailsView: UIView {
 
     // MARK: - Init
 
-    public override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         setupViewCode()
     }
@@ -93,7 +92,9 @@ public final class ExchangeDetailsView: UIView {
     }
 
     public func addRow(to section: UIStackView, icon: UIImage?, title: String, value: String?) {
-        guard let value = value else { return }
+        guard let value else {
+            return
+        }
 
         let iconView = makeIconView(image: icon)
         let titleLabel = makeLabel(
@@ -120,7 +121,9 @@ public final class ExchangeDetailsView: UIView {
         guard
             let isoDate,
             let date = DateFormatter.customDateFormatter.date(from: isoDate)
-        else { return }
+        else {
+            return
+        }
 
         addRow(to: section, icon: icon, title: title, value: date.formatted())
     }
@@ -141,7 +144,7 @@ public final class ExchangeDetailsView: UIView {
         iconView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             iconView.widthAnchor.constraint(equalToConstant: 20),
-            iconView.heightAnchor.constraint(equalToConstant: 20)
+            iconView.heightAnchor.constraint(equalToConstant: 20),
         ])
         return iconView
     }
@@ -150,7 +153,6 @@ public final class ExchangeDetailsView: UIView {
 // MARK: - ViewCodeConfiguration
 
 extension ExchangeDetailsView: ViewCodeConfiguration {
-
     public func setupViewHierarchy() {
         addSubview(scrollView)
     }
@@ -171,7 +173,7 @@ extension ExchangeDetailsView: ViewCodeConfiguration {
             containerStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 24),
             containerStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             containerStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            containerStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -24)
+            containerStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -24),
         ])
     }
 
