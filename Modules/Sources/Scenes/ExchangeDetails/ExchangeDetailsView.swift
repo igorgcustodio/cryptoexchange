@@ -1,3 +1,4 @@
+import Core
 import CoreUI
 import DesignSystem
 import UIKit
@@ -72,14 +73,6 @@ public final class ExchangeDetailsView: UIView {
         return scroll
     }()
 
-    private lazy var customDateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
-        return formatter
-    }()
-
     // MARK: - Init
 
     public override init(frame: CGRect) {
@@ -126,7 +119,7 @@ public final class ExchangeDetailsView: UIView {
     public func addFormattedDateRow(to section: UIStackView, icon: UIImage?, title: String, isoDate: String?) {
         guard
             let isoDate,
-            let date = customDateFormatter.date(from: isoDate)
+            let date = DateFormatter.customDateFormatter.date(from: isoDate)
         else { return }
 
         addRow(to: section, icon: icon, title: title, value: date.formatted())
