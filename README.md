@@ -13,4 +13,10 @@ This is a simple app to list the current exchanges.
 
 1. Create a `.env` file based on the `.env.template` and put your API Key there
 2. Run `make` on the terminal to create the Environment file with the API Key
-3. Run the app, should be good!
+3. Open Xcode, run the app, should be good!
+
+## Roadmap
+
+- Add exchange logo on the screens (should do)
+- Add pull to refresh to improve user experience (should do)
+- Add CoreData/SwiftData support for offline mode - see the last feched data (could do)
