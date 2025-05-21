@@ -18,6 +18,9 @@ let package = Package(
     ],
     dependencies: [],
     targets: [
+
+        // MARK: - Umbrella
+
         .target(
             name: "Umbrella",
             dependencies: [
@@ -29,24 +32,39 @@ let package = Package(
                 "Models",
             ]
         ),
+
+        // MARK: - Core
+
         .target(name: "Core"),
+
+        // MARK: - CoreUI
+
         .target(
             name: "CoreUI",
             dependencies: [
                 "Core",
             ]
         ),
+
+        // MARK: - Networking
+
         .target(name: "Networking"),
         .testTarget(
             name: "NetworkingTests",
             dependencies: ["Networking"]
         ),
+
+        // MARK: - Design System
+
         .target(
             name: "DesignSystem",
             dependencies: [
                 "CoreUI",
             ]
         ),
+
+        // MARK: - Scenes
+
         .target(
             name: "Scenes",
             dependencies: [
@@ -57,6 +75,9 @@ let package = Package(
                 "Networking",
             ]
         ),
+
+        // MARK: - Models
+
         .target(
             name: "Models"
         ),
