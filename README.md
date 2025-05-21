@@ -2,12 +2,15 @@
 
 This is a simple app to list the current exchanges.
 
-## Project specifications
+## Project specifications and tools
 
 - MVVM-C
 - Modularized with SPM
 - UIKit with ViewCode
 - Combine for reactiveness
+- Github Actions to build and test the app after each push/PR to develop
+- Script to generate `Environment.swift` based on `.env`
+- Makefile to generate `Environment` file and run tests
 
 ## What is needed to run?
 
