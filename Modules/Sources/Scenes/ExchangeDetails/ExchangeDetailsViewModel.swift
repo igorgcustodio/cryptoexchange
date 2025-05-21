@@ -5,14 +5,21 @@ import Models
 // MARK: - Protocols
 
 @MainActor
-public protocol ExchangeDetailsViewModelProtocol { }
+public protocol ExchangeDetailsViewModelProtocol {
+    var exchange: Exchange { get }
+}
 
 // MARK: - View Model
 
 @MainActor
 public final class ExchangeDetailsViewModel {
-    private let exchange: Exchange
+
+    // MARK: - Properties
+
+    public private(set) var exchange: Exchange
     private weak var coordinatorDelegte: CoordinatorCommonDelegate?
+
+    // MARK: - Lifecycle
 
     init(exchange: Exchange, coordinatorDelegte: CoordinatorCommonDelegate?) {
         self.exchange = exchange
@@ -20,4 +27,5 @@ public final class ExchangeDetailsViewModel {
     }
 }
 
+// MARK: - ExchangeDetailsViewModelProtocol
 extension ExchangeDetailsViewModel: ExchangeDetailsViewModelProtocol { }

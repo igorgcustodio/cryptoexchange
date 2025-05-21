@@ -41,7 +41,8 @@ extension MainView: ViewCodeConfiguration {
     }
 
     public func configureViews() {
-        backgroundColor = .white
+        tableView.backgroundColor = .clear
+        backgroundColor = UIColor.systemGroupedBackground
         tableView.register(ExchangeTableViewCell.self)
     }
 }
