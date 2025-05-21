@@ -66,7 +66,7 @@ struct NetworkingServiceTests {
 
         do {
             _ = try await service.request(MockRoute())
-            #expect(false, "Expected noResponse error")
+            assertionFailure("Expected noResponse error")
         } catch let error as Networking.ResponseError {
             #expect(error.localizedDescription == Networking.ResponseError.noResponse.localizedDescription)
         }
@@ -88,12 +88,12 @@ struct NetworkingServiceTests {
 
         do {
             _ = try await service.request(MockRoute())
-            #expect(false, "Expected clientError error")
+            assertionFailure("Expected clientError error")
         } catch let error as Networking.ResponseError {
             if case let .clientError(code) = error {
                 #expect(code == 404)
             } else {
-                #expect(false, "Expected clientError but got \(error)")
+                assertionFailure("Expected clientError but got \(error)")
             }
         }
     }
@@ -114,12 +114,12 @@ struct NetworkingServiceTests {
 
         do {
             _ = try await service.request(MockRoute())
-            #expect(false, "Expected serverError error")
+            assertionFailure("Expected serverError error")
         } catch let error as Networking.ResponseError {
             if case let .serverError(code) = error {
                 #expect(code == 500)
             } else {
-                #expect(false, "Expected serverError but got \(error)")
+                assertionFailure("Expected serverError but got \(error)")
             }
         }
     }
