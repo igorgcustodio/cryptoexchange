@@ -75,6 +75,12 @@ let package = Package(
                 "Networking",
             ]
         ),
+        .testTarget(
+            name: "ScenesTest",
+            dependencies: [
+                "Scenes"
+            ]
+        ),
 
         // MARK: - Models
 

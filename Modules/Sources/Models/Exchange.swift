@@ -16,6 +16,38 @@ public struct Exchange: Decodable, Equatable {
     public let volume1mthUsd: Double?
     public let rank: Int?
 
+    public init(
+        exchangeId: String?,
+        website: String?,
+        name: String?,
+        dataQuoteStart: String?,
+        dataQuoteEnd: String?,
+        dataOrderbookStart: String?,
+        dataOrderbookEnd: String?,
+        dataTradeStart: String?,
+        dataTradeEnd: String?,
+        dataSymbolsCount: Int?,
+        volume1hrsUsd: Double?,
+        volume1dayUsd: Double?,
+        volume1mthUsd: Double?,
+        rank: Int?
+    ) {
+        self.exchangeId = exchangeId
+        self.website = website
+        self.name = name
+        self.dataQuoteStart = dataQuoteStart
+        self.dataQuoteEnd = dataQuoteEnd
+        self.dataOrderbookStart = dataOrderbookStart
+        self.dataOrderbookEnd = dataOrderbookEnd
+        self.dataTradeStart = dataTradeStart
+        self.dataTradeEnd = dataTradeEnd
+        self.dataSymbolsCount = dataSymbolsCount
+        self.volume1hrsUsd = volume1hrsUsd
+        self.volume1dayUsd = volume1dayUsd
+        self.volume1mthUsd = volume1mthUsd
+        self.rank = rank
+    }
+
     public enum CodingKeys: String, CodingKey {
         case exchangeId = "exchange_id"
         case website
